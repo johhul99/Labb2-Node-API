@@ -1,7 +1,7 @@
 const addButton = document.getElementById('add-button');
 
 addButton.addEventListener('click', async ()=>{
-    console.log("addProduct-funktionen körs");
+    
     const nameInput = document.getElementById("productName");
     const categoryInput = document.getElementById("productCategory");
     const priceInput = document.getElementById("productPrice");
@@ -31,7 +31,10 @@ addButton.addEventListener('click', async ()=>{
         priceInput.value = "";
         quantityInput.value = "";
 
-        await fetchProducts();
+        setTimeout(async () => {
+            await fetchProducts();
+        }, 600);
+
     } catch (error) {
         console.error("Kunde inte skapa produkt:", error);
     }
