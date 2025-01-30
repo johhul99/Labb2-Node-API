@@ -31,7 +31,7 @@ addButton.addEventListener('click', async ()=>{
         priceInput.value = "";
         quantityInput.value = "";
 
-        fetchProducts();
+        await fetchProducts();
     } catch (error) {
         console.error("Kunde inte skapa produkt:", error);
     }
@@ -49,7 +49,7 @@ async function fetchProducts() {
                 <td>${product.name}</td>
                 <td>${product.category}</td>
                 <td>${product.price} SEK</td>
-                <td>${product.quantity}</td>
+                <td>${product.quantity} St</td>
             </tr>
         `).join("");
     } catch (error) {
