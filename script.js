@@ -31,9 +31,8 @@ addButton.addEventListener('click', async ()=>{
         priceInput.value = "";
         quantityInput.value = "";
 
-        setTimeout(async () => {
-            await fetchProducts();
-        }, 600);
+        await fetchProducts();
+
 
     } catch (error) {
         console.error("Kunde inte skapa produkt:", error);
